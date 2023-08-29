@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setMissions, joinMission, leaveMission,
+  setMissions,
 } from '../redux/missions/MissionSlice';
 import './styles/Missions.css';
 
 function Missions() {
   const dispatch = useDispatch();
   const missionItem = useSelector((state) => state.missions);
-  const joinedMissions = useSelector((state) => state.missions.joinedMissions);
+
   useEffect(() => {
     const fetchMissions = async () => {
       try {
@@ -22,72 +22,8 @@ function Missions() {
 
     fetchMissions();
   }, [dispatch]);
-
-  const handleJoinMission = (missionId) => {
-    dispatch(joinMission(missionId));
-  };
-
-  const handleLeaveMission = (missionId) => {
-    dispatch(leaveMission(missionId));
-  };
-
-  const isMissionJoined = (missionId) => joinedMissions
-    .some((mission) => mission.mission_id === missionId);
-
   return (
-    <div className="container">
-      <table className="table">
-        <thead>
-          <tr>
-            <th style={{ width: '130px' }}>Mission</th>
-            <th>Description</th>
-            <th rowSpan="3">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {missionItem.missions.map((mission) => (
-            <tr key={mission.mission_id}>
-              <td className="mission-name"><h4>{mission.mission_name}</h4></td>
-              <td className="mission-description">{mission.description}</td>
-              <td>
-                <div style={{ width: '130px', marginLeft: '10px' }}>
-                  <span>
-                    Member
-                  </span>
-                </div>
-              </td>
-              <td style={{
-                width: '130px',
-                marginLeft: '10px',
-              }}
-              >
-                <button
-                  type="button"
-                  onClick={() => (isMissionJoined(mission.mission_id)
-                    ? handleLeaveMission(mission.mission_id)
-                    : handleJoinMission(mission.mission_id))}
-                  className={`join-button ${
-                    isMissionJoined(mission.mission_id) ? 'active' : ''
-                  }`}
-                  style={{
-                    border: isMissionJoined(mission.mission_id)
-                      ? '2px solid red'
-                      : '2px solid grey',
-                    background: 'transparent',
-                    color: isMissionJoined(mission.mission_id) ? 'red' : 'grey',
-                  }}
-                >
-                  {isMissionJoined(mission.mission_id)
-                    ? 'Leave Mission'
-                    : 'Join Mission'}
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    { missionItem }
   );
 }
-
 export default Missions;
