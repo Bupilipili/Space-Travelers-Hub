@@ -50,9 +50,24 @@ function Missions() {
               <td className="mission-name"><h4>{mission.mission_name}</h4></td>
               <td className="mission-description">{mission.description}</td>
               <td>
-                <div style={{ width: '130px', marginLeft: '10px' }}>
-                  <span>
-                    Member
+                <div style={{ width: '115px', marginLeft: '5px', fontSize: '12px' }}>
+                  <span
+                    className={`status ${
+                      isMissionJoined(mission.mission_id)
+                        ? 'active'
+                        : ''
+                    }`}
+                    style={{
+                      backgroundColor: isMissionJoined(mission.mission_id)
+                        ? '#0290ff'
+                        : 'grey',
+                      padding: '2px 4px',
+                      borderRadius: '5px',
+                    }}
+                  >
+                    {isMissionJoined(mission.mission_id)
+                      ? 'ACTIVE MEMBER'
+                      : 'NOT A MEMBER'}
                   </span>
                 </div>
               </td>
