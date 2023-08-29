@@ -1,0 +1,20 @@
+.rocket-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rocket-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.rocket-image {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.rocket-details {
+  flex: 1;
+}
