@@ -23,7 +23,7 @@ const Missions = () => {
     <div>
       {isLoading && <div>Loading ........</div>}
       {error && <div>Could not fetch data.</div>}
-      {missions && missions.map(renderMission)}
+      {missions.missions && missions.missions.map(renderMission)}
     </div>
   );
 };
