@@ -1,0 +1,42 @@
+.container {
+  width: 86%;
+  margin: 20px auto;
+}
+
+th,
+td,
+table {
+  border: 1px solid rgba(111, 111, 111, 0.6);
+  border-collapse: collapse;
+}
+
+th {
+  padding: 5px 5px;
+  text-align: left;
+}
+
+td,
+table {
+  padding: 5px 10px 20px 5px;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #dfdfdf;
+}
+
+.mission-name {
+  vertical-align: top;
+}
+
+button {
+  box-sizing: border-box;
+  height: 35px;
+  font-size: 15px;
+  width: 110px;
+  border-radius: 5px;
+  margin-left: 12px;
+}
+
+.mission-description {
+  font-size: 16px;
+}
