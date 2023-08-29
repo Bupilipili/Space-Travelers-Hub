@@ -9,7 +9,6 @@ function Missions() {
   const dispatch = useDispatch();
   const missionItem = useSelector((state) => state.missions);
 
-  console.log(missionItem);
   useEffect(() => {
     const fetchMissions = async () => {
       try {
@@ -23,5 +22,8 @@ function Missions() {
 
     fetchMissions();
   }, [dispatch]);
+  return (
+    { missionItem }
+  );
 }
 export default Missions;
