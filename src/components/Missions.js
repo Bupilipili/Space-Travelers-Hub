@@ -1,31 +1,93 @@
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchMissions } from '../redux/missions/MissionSlice';
+import {
+  setMissions, joinMission, leaveMission,
+} from '../redux/missions/MissionSlice';
+import './styles/Missions.css';
 
-const Missions = () => {
-  const { missions, isLoading, error } = useSelector((state) => state.missions);
+function Missions() {
   const dispatch = useDispatch();
-
+  const missionItem = useSelector((state) => state.missions);
+  const joinedMissions = useSelector((state) => state.missions.joinedMissions);
   useEffect(() => {
-    dispatch(fetchMissions());
+    const fetchMissions = async () => {
+      try {
+        const response = await fetch('https://api.spacexdata.com/v3/missions');
+        const data = await response.json();
+        dispatch(setMissions(data));
+      } catch (error) {
+        console.error('Error fetching missions:', error);
+      }
+    };
+
+    fetchMissions();
   }, [dispatch]);
 
-  const renderMission = (mission, index) => (
-    <div key={index}>
-      <p>
-        {mission.mission_name}
-        {mission.mission_id}
-        {mission.description}
-      </p>
-    </div>
-  );
+  const handleJoinMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
+
+  const handleLeaveMission = (missionId) => {
+    dispatch(leaveMission(missionId));
+  };
+
+  const isMissionJoined = (missionId) => joinedMissions
+    .some((mission) => mission.mission_id === missionId);
+
   return (
-    <div>
-      {isLoading && <div>Loading ........</div>}
-      {error && <div>Could not fetch data.</div>}
-      {missions.missions && missions.missions.map(renderMission)}
+    <div className="container">
+      <table className="table">
+        <thead>
+          <tr>
+            <th style={{ width: '130px' }}>Mission</th>
+            <th>Description</th>
+            <th rowSpan="3">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {missionItem.missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <td className="mission-name"><h4>{mission.mission_name}</h4></td>
+              <td className="mission-description">{mission.description}</td>
+              <td>
+                <div style={{ width: '130px', marginLeft: '10px' }}>
+                  <span>
+                    Member
+                  </span>
+                </div>
+              </td>
+              <td style={{
+                width: '130px',
+                marginLeft: '10px',
+              }}
+              >
+                <button
+                  type="button"
+                  onClick={() => (isMissionJoined(mission.mission_id)
+                    ? handleLeaveMission(mission.mission_id)
+                    : handleJoinMission(mission.mission_id))}
+                  className={`join-button ${
+                    isMissionJoined(mission.mission_id) ? 'active' : ''
+                  }`}
+                  style={{
+                    border: isMissionJoined(mission.mission_id)
+                      ? '2px solid red'
+                      : '2px solid grey',
+                    background: 'transparent',
+                    color: isMissionJoined(mission.mission_id) ? 'red' : 'grey',
+                  }}
+                >
+                  {isMissionJoined(mission.mission_id)
+                    ? 'Leave Mission'
+                    : 'Join Mission'}
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-};
+}
 
 export default Missions;
