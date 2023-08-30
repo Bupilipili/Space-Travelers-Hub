@@ -1,0 +1,17 @@
+.profile-container {
+  display: block;
+}
+
+.head {
+  margin: 16px;
+}
+
+.reserved-rockets-list {
+  list-style: none;
+  padding: 0;
+}
+
+.reserved-rocket {
+  padding: 18px;
+  border: 1px solid #ddd;
+}
