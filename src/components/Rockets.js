@@ -12,7 +12,6 @@ function Rockets() {
   };
 
   const handleCancelReservation = (rocketId) => {
-    console.log('Cancelling reservation for rocket ID:', rocketId);
     dispatch(cancelReservation(rocketId));
   };
 
@@ -26,8 +25,12 @@ function Rockets() {
               <h3>{rocket.name}</h3>
               {rocket.reserved ? (
                 <div>
-                  <p className="description"><span className="reserved-description">Reserved</span>{rocket.description}</p>
+                  <p className="description">
+                    <span className="reserved-description">Reserved</span>
+                    {rocket.description}
+                  </p>
                   <button
+                    type="button"
                     className="Cbutton"
                     onClick={() => handleCancelReservation(rocket.id)}
                   >
@@ -38,6 +41,7 @@ function Rockets() {
                 <div>
                   <p className="description">{rocket.description}</p>
                   <button
+                    type="button"
                     className="Rbutton"
                     onClick={() => handleReserveRocket(rocket.id)}
                   >
