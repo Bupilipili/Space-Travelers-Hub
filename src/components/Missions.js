@@ -1,7 +1,11 @@
 function Missions() {
   return (
     <div>
-      Missions
+      {missionItem.missions.map((mission) => (
+        mission.mission_id
+        // mission.mission_name
+        // mission.description
+      ))}
     </div>
   );
 }
