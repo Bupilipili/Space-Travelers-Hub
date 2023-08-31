@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  setMissions, joinMission, leaveMission,
-} from '../redux/missions/MissionSlice';
+import { setMissions, joinMission, leaveMission } from '../redux/missions/MissionSlice';
 import './styles/Missions.css';
 
 function Missions() {
@@ -15,8 +13,10 @@ function Missions() {
         const response = await fetch('https://api.spacexdata.com/v3/missions');
         const data = await response.json();
         dispatch(setMissions(data));
+        return data;
       } catch (error) {
         console.error('Error fetching missions:', error);
+        throw error;
       }
     };
 
@@ -50,9 +50,24 @@ function Missions() {
               <td className="mission-name"><h4>{mission.mission_name}</h4></td>
               <td className="mission-description">{mission.description}</td>
               <td>
-                <div style={{ width: '130px', marginLeft: '10px' }}>
-                  <span>
-                    Member
+                <div style={{ width: '115px', marginLeft: '5px', fontSize: '12px' }}>
+                  <span
+                    className={`status ${
+                      isMissionJoined(mission.mission_id)
+                        ? 'active'
+                        : ''
+                    }`}
+                    style={{
+                      backgroundColor: isMissionJoined(mission.mission_id)
+                        ? '#0290ff'
+                        : 'grey',
+                      padding: '2px 4px',
+                      borderRadius: '5px',
+                    }}
+                  >
+                    {isMissionJoined(mission.mission_id)
+                      ? 'ACTIVE MEMBER'
+                      : 'NOT A MEMBER'}
                   </span>
                 </div>
               </td>
