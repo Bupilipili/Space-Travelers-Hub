@@ -12,7 +12,6 @@ function Rockets() {
   };
 
   const handleCancelReservation = (rocketId) => {
-    console.log('Cancelling reservation for rocket ID:', rocketId);
     dispatch(cancelReservation(rocketId));
   };
 
@@ -31,6 +30,7 @@ function Rockets() {
                     {rocket.description}
                   </p>
                   <button
+                    type="button"
                     className="Cbutton"
                     onClick={() => handleCancelReservation(rocket.id)}
                   >
@@ -41,6 +41,7 @@ function Rockets() {
                 <div>
                   <p className="description">{rocket.description}</p>
                   <button
+                    type="button"
                     className="Rbutton"
                     onClick={() => handleReserveRocket(rocket.id)}
                   >
