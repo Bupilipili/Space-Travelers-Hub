@@ -28,7 +28,7 @@ table tbody tr:nth-child(odd) {
   vertical-align: top;
 }
 
-button {
+.join-button {
   box-sizing: border-box;
   height: 35px;
   font-size: 15px;
