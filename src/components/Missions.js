@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMissions, joinMission, leaveMission } from '../redux/missions/MissionSlice';
 import './styles/Missions.css';
@@ -7,21 +7,16 @@ function Missions() {
   const dispatch = useDispatch();
   const missionItem = useSelector((state) => state.missions);
   const joinedMissions = useSelector((state) => state.missions.joinedMissions);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-
   useEffect(() => {
     const fetchMissions = async () => {
-      setIsLoading(true);
       try {
         const response = await fetch('https://api.spacexdata.com/v3/missions');
         const data = await response.json();
         dispatch(setMissions(data));
         return data;
       } catch (error) {
-        setError('Error fetching missions:');
-        setIsLoading(false);
-        return null;
+        console.error('Error fetching missions:', error);
+        throw error;
       }
     };
 
@@ -41,8 +36,6 @@ function Missions() {
 
   return (
     <div className="container">
-      {isLoading && <p className="loader">Loading...</p>}
-      {error && error}
       <table className="table">
         <thead>
           <tr>
