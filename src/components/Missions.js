@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setMissions, joinMission, leaveMission,
+  setMissions,
 } from '../redux/missions/MissionSlice';
 import './styles/Missions.css';
 
 function Missions() {
   const dispatch = useDispatch();
   const missionItem = useSelector((state) => state.missions);
-  const joinedMissions = useSelector((state) => state.missions.joinedMissions);
+
   useEffect(() => {
     const fetchMissions = async () => {
       try {
@@ -22,18 +22,6 @@ function Missions() {
 
     fetchMissions();
   }, [dispatch]);
-
-  const handleJoinMission = (missionId) => {
-    dispatch(joinMission(missionId));
-  };
-
-  const handleLeaveMission = (missionId) => {
-    dispatch(leaveMission(missionId));
-  };
-
-  const isMissionJoined = (missionId) => joinedMissions
-    .some((mission) => mission.mission_id === missionId);
-
   return (
     <div className="container">
       <table className="table">
@@ -101,8 +89,8 @@ function Missions() {
           ))}
         </tbody>
       </table>
+
     </div>
   );
 }
-
 export default Missions;
