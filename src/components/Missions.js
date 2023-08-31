@@ -107,7 +107,6 @@ function Missions() {
           ))}
         </tbody>
       </table>
-
     </div>
   );
 }

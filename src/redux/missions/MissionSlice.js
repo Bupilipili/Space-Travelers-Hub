@@ -5,8 +5,6 @@ const missionSlice = createSlice({
   initialState: {
     missions: [],
     joinedMissions: [],
-    loading: false,
-    error: null,
   },
   reducers: {
     setMissions: (state, action) => {
