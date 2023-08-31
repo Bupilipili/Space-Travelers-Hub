@@ -1,16 +1,15 @@
 .rocket-list {
   list-style: none;
-  padding: 0;
+  padding: 3px 15px;
 }
 
 .rocket-item {
   display: flex;
-  margin-bottom: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .rocket-image {
-  width: 200px;
+  width: 270px;
   height: 200px;
   margin-right: 20px;
 }
@@ -19,6 +18,36 @@
   flex: 1;
 }
 
-.Butt {
-  text-decoration: none;
+.reserved-description {
+  background-color: lightblue;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.description {
+  padding: 15px 0;
+}
+
+.Rbutton {
+  background-color: rgba(0, 145, 255, 0.938);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Cbutton {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Rbutton:hover,
+.Cbutton:hover {
+  opacity: 0.8;
 }

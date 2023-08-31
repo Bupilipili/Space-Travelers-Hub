@@ -7,7 +7,6 @@ function Missions() {
   const dispatch = useDispatch();
   const missionItem = useSelector((state) => state.missions);
   const joinedMissions = useSelector((state) => state.missions.joinedMissions);
-
   useEffect(() => {
     const fetchMissions = async () => {
       try {
@@ -102,7 +101,6 @@ function Missions() {
           ))}
         </tbody>
       </table>
-
     </div>
   );
 }
