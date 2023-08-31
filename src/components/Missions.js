@@ -40,7 +40,7 @@ function Missions() {
 
   return (
     <div className="container">
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p className="loader">Loading...</p>}
       {error && error}
       <table className="table">
         <thead>
