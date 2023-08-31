@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets component matches snapshot 1`] = `
+<div>
+   
+  <div>
+    <ul
+      class="rocket-list"
+    >
+      <li
+        class="rocket-item"
+      >
+        <img
+          alt="Falcon 9"
+          class="rocket-image"
+          src="image-url"
+        />
+        <div
+          class="rocket-details"
+        >
+          <h3>
+            Falcon 9
+          </h3>
+          <div>
+            <p
+              class="description"
+            >
+              Sample rocket description
+            </p>
+            <button
+              class="Rbutton"
+              type="button"
+            >
+              Reserve Rocket
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
