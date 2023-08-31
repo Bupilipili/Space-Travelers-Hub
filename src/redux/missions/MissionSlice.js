@@ -1,20 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// export const fetchMissions = createAsyncThunk(
-//   'missions/fetchMissions',
-
-// async () => {
-//   try {
-//     const response = await fetch('https://api.spacexdata.com/v3/missions');
-//     const data = await response.json();
-//     console.log('data', data);
-//   } catch (error) {
-//     console.error('Error fetching missions:', error);
-//     throw error;
-//   }
-// },
-// );
-
 const missionSlice = createSlice({
   name: 'missions',
   initialState: {
@@ -47,21 +32,6 @@ const missionSlice = createSlice({
       );
     },
   },
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(fetchMissions.pending, (state) => {
-  //       state.loading = true;
-  //       state.error = null;
-  //     })
-  //     .addCase(fetchMissions.fulfilled, (state, action) => {
-  //       state.loading = false;
-  //       state.missions = action.payload;
-  //     })
-  //     .addCase(fetchMissions.rejected, (state, action) => {
-  //       state.loading = false;
-  //       state.error = action.error.message;
-  //     });
-  // },
 });
 
 export const { setMissions, joinMission, leaveMission } = missionSlice.actions;
