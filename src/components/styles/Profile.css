@@ -1,32 +1,19 @@
-.mission-container {
-  margin-left: 100px;
-  margin-top: 20px;
-  width: 40%;
-  min-height: 100px;
+.profile-container {
+  display: block;
 }
 
-.joinedMission {
-  margin-top: 5px;
+.head {
+  margin: 16px;
 }
 
-ul {
+.reserved-rockets-list {
   list-style: none;
-  border: 1px solid #ccc;
+  padding: 0;
 }
 
-li {
-  height: 50px;
-  border-bottom: 1px solid #ccc;
-  padding-left: 15px;
-  padding-top: 15px;
-}
-
-.no-mission {
-  height: 30px;
-  width: 90%;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 10px;
+.reserved-rocket {
+  padding: 18px;
+  border: 1px solid #ddd;
 }
 
 .Rockets {
