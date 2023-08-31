@@ -1,6 +1,6 @@
 .rocket-list {
   list-style: none;
-  padding: 3px 15px;
+  padding: 2px 30px;
 }
 
 .rocket-item {
@@ -9,8 +9,8 @@
 }
 
 .rocket-image {
-  width: 270px;
-  height: 200px;
+  width: 230px;
+  height: 180px;
   margin-right: 20px;
 }
 
