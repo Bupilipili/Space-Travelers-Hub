@@ -20,8 +20,9 @@ function Missions() {
         return data;
       } catch (error) {
         setError('Error fetching missions:');
+        setIsLoading(false);
+        return null;
       }
-      setIsLoading(false);
     };
 
     fetchMissions();
