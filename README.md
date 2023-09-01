@@ -105,9 +105,10 @@ This app will be deployed using Netlify.
 - Twitter: [@ErickBupilipili](https://twitter.com/ErickBupilipili?t=UqGSzTxuad6me1Rf7eplPg&s=08)
 - LinkedIn: [ErickBupilipili](https://www.linkedin.com/in/erick-bupilipili-08ba31228)
 
-👤 **Bhekisile**
+👤 **Bhekisile Jozi**
 
 - GitHub: [@Bhekisile](https://github.com/Bhekisile)
+- LinkedIn: [BhekisileJozi](https://www.linkedin.com/in/bhekisile-jozi-b9823369/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -134,7 +135,7 @@ If you like this project you can star the repository to make it look better.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for giving me all the necessary knowledge i need to make this project.
+I would like to thank Microverse for giving me all the necessary knowledge I need to make this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

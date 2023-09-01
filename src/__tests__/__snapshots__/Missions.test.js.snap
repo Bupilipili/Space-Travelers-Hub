@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions component handle join and leave the mission 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <p
+      class="loader"
+    >
+      Loading...
+    </p>
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th
+            style="width: 130px;"
+          >
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th
+            rowspan="3"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Missions component renders Missions component 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <p
+      class="loader"
+    >
+      Loading...
+    </p>
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th
+            style="width: 130px;"
+          >
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th
+            rowspan="3"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
