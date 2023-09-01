@@ -12,7 +12,7 @@ function Navigation() {
         </div>
         <div className="nav-right" />
         <NavLink
-          to="/rockets"
+          to="/"
           className="view"
           style={({ isActive }) => ({
             textDecoration: isActive ? 'underline' : '',
