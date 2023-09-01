@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component matches snapshot 1`] = `
+<div>
+   
+  <div>
+    <div
+      class="navbar"
+    >
+      <div
+        class="nav-left"
+      >
+        <img
+          alt=""
+          src="planet.png"
+          style="width: 60px; height: 60px;"
+        />
+        <h1>
+          Space Travelers' Hub
+        </h1>
+      </div>
+      <div
+        class="nav-right"
+      />
+      <a
+        class="view"
+        href="/rockets"
+      >
+        Rockets
+      </a>
+      <a
+        class="view"
+        href="/missions"
+      >
+        Missions
+      </a>
+      <a
+        class="view-profile"
+        href="/profile"
+      >
+        My Profile
+      </a>
+    </div>
+  </div>
+</div>
+`;
