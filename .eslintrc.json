@@ -33,5 +33,5 @@
       "rules": { "no-param-reassign": ["error", { "props": false }] }
     }
   ],
-  "ignorePatterns": ["dist/", "build/", "App.js", "Rockets.js", "RocketSlice.js", "Missions.js", "Rockets.test.js", "Missions.test.js"]
+  "ignorePatterns": ["dist/", "build/", "App.js", "Rockets.js", "RocketSlice.js", "Missions.js", "Rockets.test.js", "Profile.test.js", "Missions.test.js"]
 }
