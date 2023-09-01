@@ -4,7 +4,7 @@
   <img src="./public/planet.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Space Travelers Hub</b></h3>
+  <h3><b>Space Travelers' Hub</b></h3>
 
 </div>
 
@@ -28,9 +28,9 @@
 - [📝 License](#license)
 
 
-# 📖 Space Travelers Hub <a name="about-project"></a>
+# 📖 Space Travelers' Hub <a name="about-project"></a>
 
-**Space Travelers Hub** is a web application designed to assist users in managing their rocket and mission reservations for space travel. The application aims to provide a platform where users can easily book and keep track of their reserved rockets and missions. Additionally, it offers a profile page feature where users can view the details of their reserved rockets and missions. This kind of application could be useful for space enthusiasts, scientists, or anyone interested in space travel.
+**Space Travelers' Hub** is a web application designed to assist users in managing their rocket and mission reservations for space travel. The application aims to provide a platform where users can easily book and keep track of their reserved rockets and missions. Additionally, it offers a profile page feature where users can view the details of their reserved rockets and missions. This kind of application could be useful for space enthusiasts, scientists, or anyone interested in space travel.
 
 ## 🛠 Built With <a name="built-with"></a>
 
