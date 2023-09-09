@@ -93,7 +93,7 @@ Open the index.html file on the browser or use a VS code extension server to sta
 
 ### Deployment
 
-This app will be deployed using Netlify.
+Click (here)[https://spacetravelershub0x.netlify.app/]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
